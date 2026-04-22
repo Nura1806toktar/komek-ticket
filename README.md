@@ -1,58 +1,126 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Frontend Developer Test Task — Cinema Layout
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Project Description
 
-## About Laravel
+This project is a test assignment for the **Frontend Developer position**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The goal of the task was to implement the layout from a provided **Figma design** using **Laravel framework with Blade templates**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The project represents a cinema website layout with movie cards, sessions, navigation, and responsive behavior.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+# Technologies Used
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* Laravel 12
+* Blade Templates
+* HTML5
+* CSS3 (Flexbox + Grid)
+* JavaScript (minimal usage)
+* Docker
+* Laravel Sail
+* Git / GitHub
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+# Implemented Features
 
-## Agentic Development
+### Layout
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+The layout was implemented according to the Figma design.
 
-```bash
-composer require laravel/boost --dev
+Implemented sections:
 
-php artisan boost:install
-```
+* Header
+* Cinema information bar
+* Navigation menu
+* Day filter
+* Movies grid
+* Movie cards
+* Footer
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+---
 
-## Contributing
+### Movie Cards
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Each card includes:
 
-## Code of Conduct
+* Movie poster
+* Age badge
+* Premiere badge
+* Movie title
+* Genres
+* Sessions list (time, format, price, hall)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Different card states were implemented:
 
-## Security Vulnerabilities
+* Movie with multiple sessions
+* Movie with limited sessions
+* Movie without poster (placeholder)
+* Movie with "Sessions tomorrow" button
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+# Responsive Design
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The mobile layout was implemented independently since it was not provided in the design.
+
+Responsive behavior:
+
+Desktop → 4 cards
+Tablet → 3 cards
+Mobile → 2 cards
+Small screens → 1 card
+
+---
+
+# Project Structure
+
+resources/views
+
+layouts/
+app.blade.php
+
+components/
+header.blade.php
+movie-card.blade.php
+footer.blade.php
+
+pages/
+home.blade.php
+
+---
+
+# Running the Project
+
+Clone the repository:
+
+git clone https://github.com/Nura1806toktar/komek-ticket.git
+
+Go to the project directory:
+
+cd komek-ticket
+
+Install dependencies:
+
+composer install
+
+Start Docker containers with Sail:
+
+./vendor/bin/sail up
+
+Open in browser:
+
+http://localhost
+
+---
+
+# Figma Design
+
+Figma layout:
+
+https://www.figma.com/design/MCNiSKbCdmN4su6OFNUNYd/Komek-By-Ticket
+
+Background image:
+
+https://drive.google.com/file/d/1ULDxghM21ACVBxvrySsafqc05U2YVE7j/view
